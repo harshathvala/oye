@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                margin: 0;
+            }
+            .navbar {
+                overflow: hidden;
+                background: rgb(236, 84,89);
+                width: auto;
+                height: 118px;
+            }
+            .img {
+                float: left;
+                top:0;
+                bottom: 0;
+            }
+            .navbar header {
+                float: left;
+            }
+            .navbar a {
+                font-size: 16px;
+                color: rgb(0, 0, 0);
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: underline;
+                display:block;
+            }
+            .subnav {
+                float: left;
+                overflow: hidden;
+            }
+            .subnav .subnavbtn {
+                font-size: 16px;
+                border: none;
+                outline:none;
+                color:white;
+                padding: 14px 16px;
+                background-color:inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+            .navbar a :hover, .subnav:hover .subnavbtn {
+                background-color:inherit;
+            }
+            .subnav-content {
+                display: none;
+                right: 0;
+                position: absolute;
+                background-color:whitesmoke;
+                width: 100%;
+                background-origin:content-box;
+                z-index: 1;
+
+            }
+            .subnav:hover .subnav-content {
+                display: block;
+                text-decoration: underline;
+            }
+            .column {
+                float: left;
+                width: 20%;
+                padding: 10px;
+                background-color:whitesmoke;
+                height: 250px;
+            }
+            .column a {
+                float: none;
+                padding: 10px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+            .column h3 {
+                color: rgb(239,83,89);
+            }
+            .column a:hover {
+                background-color:whitesmoke;
+                text-decoration: underline;
+                text-decoration-color: goldenrod;
+            }
+            .row:after {
+                content: "";
+                display: table;
+                clear:both;
+            }
+            * {
+                box-sizing: border-box
+            }
+            .sildeshow-container {
+                max-width: 1000px;
+                position: relative;
+                margin:auto;
+            }
+            .mySlides {
+                display:none;
+                float: right;
+            }
+            .prev, .next {
+                cursor:pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                margin-top: -22px;
+                padding: 16px;
+                color:white;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+            }
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+            .prev:hover, .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+            .fade {
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+            @keyframes fade {
+                from {opacity: .4}          
+                to {opacity: 1;}
+            }
+            .h3 {
+                color:rgb(236, 84,89);  
+                text-decoration: underline;
+                text-decoration-color: goldenrod;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="header">
+            <img src="logo.png" alt="oyeHappy.com">
+            </div>
+            <div class="subnav">
+                <button class="subnavbtn">Gifts<i class="h-caret-down"></i></button>
+                <div class="subnav-content">
+                    <p><a href="#customised">Customised</a></p>
+                    <p><a href="#romamtic">Romantic</a></p>
+                    <p><a href="#naughty">Naughty</a></p>
+                    <p><a href="#decorative">Decorative</a></p>
+                    <p><a href="#hampers">Hampers</a></p>
+                </div>
+            </div>
+            <div class="subnav">
+                <button class="subnavbtn">Relationship<i class="h-caret-down"></i></button>
+                <div class="subnav-content">
+                    <div class="row">
+                        <div class="column">
+                            <h3>Special</h3>
+                            <a href="#wife">Wife</a>
+                            <a href="#husband">Husband</a>
+                            <a href="#girlfirend">Girlfriend</a>
+                            <a href="#boyfriend">Boyfriend</a>
+                            <a href="#fiance">Fiance</a>
+                        </div>
+                        <div class="column">
+                            <h3>Friends</h3>
+                            <a href="#him">Him</a>
+                            <a href="#her">Her</a>
+                            <a href="#both">Both</a>
+                            <a href="#colleagues">Colleagues</a>
+                        </div>
+                        <div class="column">
+                            <h3>Parents</h3>
+                            <a href="#father">Father</a>
+                            <a href="#mother">Mother</a>
+                            <a href="#both">Both</a>
+                        </div>
+                        <div class="column">
+                            <h3>Family</h3>
+                            <a href="#son">Son</a>
+                            <a href="#daughter">Daughter</a>
+                            <a href="#couple">Couple</a>
+                            <a href="#siblings">Sibling</a>
+                            <a href="#others">Others</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subnav">
+                <button class="subnavbtn">Ocassion<i class="h-caret-down"></i></button>
+                <div class="subnav-content">
+                    <a href="#birthday">Birthday</a>
+                    <a href="#anniversary">Anniversary</a>
+                    <a href="#courtshipv period">CourtShip Period</a>
+                    <a href="#just like that">Just Like That</a>
+                    <a href="#wedding">wedding</a>
+                </div>
+            </div>
+            <div class="subnav">
+                <button class="subnavbtn">Experiences<i class="h-caret-down"></i></button>
+                <div class="subnav-content">   
+                    <a href="#banglore">Banglore</a>
+                    <a href="#hydrebad">Hydrebad</a>
+                    <a href="#mumbai">Mumbai</a>
+                    <a href="#delhi&ncr">Delhi&NCR</a>
+                    <a href="#chennai">Chennai</a>
+                    <a href="#pune">Pune</a>
+                    <a href="#ahmedabad">Ahmedabad</a>
+                    <a href="#kolkata">Kolkata</a>
+                </div>
+            </div>
+        </div>
+        <div>
+        <div class="sildeshow-container">
+            <div class="myslides">
+                <span><img src="500x180.png" style="width:100%"></span>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+            <a class="next" onclick="plusSlide(1)">&#10093</a>
+        </div>
+        <div style="text-align: center">
+        <img src="new-free-delivery.png">
+        Free delivery for orders above Rs.1000
+        </div>
+        <br>
+        <h3>For Him</h3>
+        <script>
+        var slideIndex=1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides(slideIndex +=n);
+        }
+        function currentslide(n) {
+            showSlides(slideIndex=n);
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex=1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i=0;i<length;i++) {
+                [i].className=[i].className.replace("active","");
+            }
+            slides[slideIndex-1].style.display="block";
+
+        }
+        </script>
+    </body>
+</html>
