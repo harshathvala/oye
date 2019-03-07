@@ -12,13 +12,15 @@
             .navbar {
                 overflow: hidden;
                 background: rgb(236, 84,89);
-                width: auto;
+                width: 100%;
                 height: 118px;
+                
+                
             }
             .img {
-                float: left;
+                float: right;
                 top:0;
-                bottom: 0;
+                bottom: 10;
             }
             .navbar header {
                 float: left;
@@ -34,6 +36,7 @@
             .subnav {
                 float: left;
                 overflow: hidden;
+                z-index: 20;
             }
             .subnav .subnavbtn {
                 font-size: 16px;
@@ -57,7 +60,6 @@
                 background-color:whitesmoke;
                 width: 100%;
                 background-origin:content-box;
-                z-index: 1;
 
             }
             .subnav:hover .subnav-content {
@@ -98,12 +100,14 @@
             }
             .sildeshow-container {
                 max-width: 1000px;
+                height: 300px;
                 position: relative;
                 margin:auto;
+               
             }
             .mySlides {
                 display:none;
-                float: right;
+                float: left;
             }
             .prev, .next {
                 cursor:pointer;
@@ -136,16 +140,21 @@
             }
             .gallery {
                 margin: 5px;
-                border: 1px solid burlywood;
+                border: 1px solid rgb(235, 232, 228);
                 float:left;
                 width: 217px;
                 height: 380px;
                 border-radius: 2%;
             }
-            div.gallery img {
+            .gallery img {
                 width: 100%;
                 height: 30%;
                 border-radius: 2%;
+            }
+            .gallery:hover {
+                opacity: 0.8;
+                box-shadow: 0 4px rgb(146, 146, 146);
+                transform: translateY(1px);
             }
             div.disc {
                 padding: 20px;
@@ -182,21 +191,28 @@
                 color:rgb(239,84,89);
             }
             .row1 {
-                display: flex;
-                flex-wrap: wrap;
-                padding: 0 8px;
+                display:inline;
+                padding: 0 4px;
+                
             }
             .column1 {
-                flex:50%;
-                max-width: auto;
-                padding: 0 4px;
+                float:left;
                 background-color: cornsilk;
             }
             .column1 img {
-                margin-top: 50px;
-                vertical-align: middle;
+                border-radius: 4px;
+                padding: 0 6px;
             }
-
+            .column2 {
+                float: left;
+                max-width: 100%;
+                background-color: cornsilk;
+            }
+            .column2 img {
+                border-radius: 4px;
+                padding: 0 6px;
+            }
+            
         </style>
     </head>
     <body>
@@ -301,6 +317,7 @@
                 </div>
             </div>
         </div>
+        <div class="slider">
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="h.jpg">
@@ -446,16 +463,34 @@
         </div>
         <br>
         <div class="most">
-          <h3>Most Loved suprise's</h3>
+                <h3>Most Loved suprise's</h3>
           <div class="row1">
               <div class="column1">
-                <a target="_blank" href="IMG_3637-225x170.jpg"><img src="IMG_3637-225x170.jpg" alt="coustom gifts">Coustomised Gifts</a>
-              </div>
-              <div class="column1">
-                <a target="_blank" href="IMG_9725-225x170.jpg"><img src="IMG_9725-225x170.jpg" alt="Romantic gifts" width="450px" height="300px">
-                   <p class="text"> Romantic Gift's</p>
+                <a target="_blank" href="IMG_3637-225x170.jpg"><img src="IMG_3637-225x170.jpg" alt="coustom gifts" width="451px" height="298px">
+                <p class="text">Coustomised Gifts</p>
                 </a>
               </div>
+              <div class="column1">
+                <a target="_blank" href="IMG_9725-225x170.jpg"><img src="IMG_9725-225x170.jpg" alt="Romantic gifts" width="451px" height="298px">
+                   <p class="text"> Romantic Gift's</p>
+                </a>
+                <div class="column2">
+                    <a target="_blank" href="619f923e1d9fc27ec543812b3df1ff25-225x170.jpg"><img src="619f923e1d9fc27ec543812b3df1ff25-225x170.jpg" width="292px" height="190px">
+                        <p class="text">Gifts For Home</p>
+                    </a>
+                </div>
+                <div class="column2">
+                    <a target="_blank" href="IMG_2034-2-225x170.jpg"><img src="IMG_2034-2-225x170.jpg" width="292px" height="190px">
+                        <p class="text">Quirky Gifts</p>
+                    </a>
+                </div>
+                <div class="column2">
+                    <a target="_blank" href="Art-in-a-bottle_540x360.jpg"><img src="Art-in-a-bottle_540x360.jpg" width="292px" height="190px">
+                        <p class="text">Custom art</p>
+                    </a>
+                </div>
+              </div>
+        </div>
         </div>
         </div>
         <script>
@@ -478,7 +513,7 @@
             slides[slideIndex-1].style.display="block";
 
         }
-        $('.reponsive').owlcarousel ({
+        $('.slider').owlcarousel ({
             loop:true,
             margin:10,
             nav:true,
