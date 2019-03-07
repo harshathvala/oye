@@ -6,7 +6,7 @@
                 box-sizing: border-box;
             }
             body {
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-family:cursive;
                 margin: 0;
             }
             .navbar {
@@ -45,8 +45,10 @@
                 font-family: inherit;
                 margin: 0;
             }
-            .navbar a :hover, .subnav:hover .subnavbtn {
+            .navbar a:hover, .subnav:hover .subnavbtn {
                 background-color:inherit;
+                text-decoration: underline;
+                text-decoration-color: goldenrod;
             }
             .subnav-content {
                 display: none;
@@ -61,6 +63,8 @@
             .subnav:hover .subnav-content {
                 display: block;
                 text-decoration: underline;
+                text-decoration-color: goldenrod;
+                
             }
             .column {
                 float: left;
@@ -130,12 +134,69 @@
                 from {opacity: .4}          
                 to {opacity: 1;}
             }
-            .h3 .u {
-                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                color:rgb(236, 84,89);  
-                text-decoration: underline;
-                text-decoration-color: goldenrod;
+            .gallery {
+                margin: 5px;
+                border: 1px solid burlywood;
+                float:left;
+                width: 217px;
+                height: 380px;
+                border-radius: 2%;
             }
+            div.gallery img {
+                width: 100%;
+                height: 30%;
+                border-radius: 2%;
+            }
+            div.disc {
+                padding: 20px;
+                text-align: center;
+                display: inline-block;
+            }
+            * {
+                box-sizing: content-box;
+            }
+            .responsive {
+                margin: 5px;
+                float:left;
+                width: 25%;
+                height: 25%;
+            }
+            p.price {
+                color:rgb(236, 84,89);
+            }
+            .container {
+                position: relative;
+                text-align: center;
+                color: white;
+            }
+            .text {
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            .most {
+                text-align: bottom;
+                float: left;
+                padding: 32px;
+                color:rgb(239,84,89);
+            }
+            .row1 {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0 8px;
+            }
+            .column1 {
+                flex:50%;
+                max-width: auto;
+                padding: 0 4px;
+                background-color: cornsilk;
+            }
+            .column1 img {
+                margin-top: 50px;
+                vertical-align: middle;
+            }
+
         </style>
     </head>
     <body>
@@ -226,7 +287,7 @@
         Free delivery for orders above Rs.1000/-
         </div>
         <br>
-        <h3><u>For Him</u></h3>
+        <h3 style="color:rgb(239,84,89); font-family: fantasy;font-size: 25px"><u style="text-decoration-color:goldenrod">For Him</u></h3>
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="IMG_1182-540x360-1-225x170.jpg">
@@ -312,8 +373,90 @@
                 </a>
                 <div class="disc">
                     <h3>Frame A Star</h3>
+                    <p>Name a star after him/her and frame the constellation chart with the location of the Star</p>
+                    <hr>
+                    <p class="price">₹ 2350</p>
                 </div>
             </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="IMG_0638-225x170.jpg">
+                    <img src="IMG_0638-225x170.jpg" alt="love letter">
+                </a>
+                <div class="disc">
+                    <h3>Letters to my Love</h3>
+                    <p>A bunch of 7 envolopes-each with a cutereason why He/She should forever be your's</p>
+                    <hr>
+                    <p class="price">₹ 590</p>
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="Thumbnail-113-225x170.jpg">
+                    <img src="Thumbnail-113-225x170.jpg" alt="photo">
+                </a>
+                <div class="disc">
+                    <h3>pic-a-letter</h3>
+                    <p>Gift that selfie addicted person a suprise that she will cherish and dhow off forever</p>
+                    <hr>
+                    <p class="price">₹ 1,890</p>
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="Cratefull_540x360.jpg">
+                    <img src="Cratefull_540x360.jpg" alt="crate">
+                </a>
+                <div class="disc">
+                    <h3>Crate Full of Love</h3>
+                    <p>Gift your better half an exceptionally romantic Hamper filled with lots of amazing goodies</p>
+                    <hr>
+                    <p class="price">₹ 4,950</p>
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="IMG_9706-225x170.jpg">
+                    <img src="IMG_9706-225x170.jpg" alt="bucket list">
+                </a>
+                <div class="disc">
+                    <h3>World on my Bucket List</h3>
+                    <p>For those who love to travel,time to put the entier world on your Bucket List</p>
+                    <hr>
+                    <p class="price">₹ 1,950</p>
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="IMG_8263-225x170.jpg">
+                    <img src="IMG_8263-225x170.jpg" alt="frame star">
+                </a>
+                <div class="disc">
+                    <h3>Name a Star</h3>
+                    <p>Name a star for your loved one and remind them thst they mean he universe to you</p>
+                    <hr>
+                    <p class="price">₹1,950</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="most">
+          <h3>Most Loved suprise's</h3>
+          <div class="row1">
+              <div class="column1">
+                <a target="_blank" href="IMG_3637-225x170.jpg"><img src="IMG_3637-225x170.jpg" alt="coustom gifts">Coustomised Gifts</a>
+              </div>
+              <div class="column1">
+                <a target="_blank" href="IMG_9725-225x170.jpg"><img src="IMG_9725-225x170.jpg" alt="Romantic gifts" width="450px" height="300px">
+                   <p class="text"> Romantic Gift's</p>
+                </a>
+              </div>
+        </div>
         </div>
         <script>
         var slideIndex=1;
@@ -335,6 +478,22 @@
             slides[slideIndex-1].style.display="block";
 
         }
+        $('.reponsive').owlcarousel ({
+            loop:true,
+            margin:10,
+            nav:true,
+            responsive: {
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
+        })
         </script>
     </body>
 </html>
